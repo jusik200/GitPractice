@@ -21,5 +21,11 @@ public class HomePage {
     @FindBy(xpath = "/html/body/div[2]/div/main/section[1]/figure/div/div/div[1]/ul/li[2]/a")
     public WebElement laborTab;
 
+    @FindBy(id = "houseTypeSelectList")
+    public WebElement houseTypeSelect;
+
+    @FindBy(id = "hp-nav-select-house")
+    public WebElement bedroomAmountSelect;
+
 
 }
