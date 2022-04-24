@@ -27,5 +27,8 @@ public class HomePage {
     @FindBy(id = "hp-nav-select-house")
     public WebElement bedroomAmountSelect;
 
+    @FindBy(xpath = "/html[1]/body[1]/div[2]/div[1]/main[1]/section[1]/figure[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[1]/div[1]/button[1]")
+    public WebElement houseTypeSelectedValue;
+
 
 }

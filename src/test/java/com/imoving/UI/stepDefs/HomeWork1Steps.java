@@ -7,6 +7,7 @@ import com.imoving.UI.utils.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 
 public class HomeWork1Steps {
@@ -18,9 +19,15 @@ public class HomeWork1Steps {
         driver.get(ConfigReader.getProperty("environment"));
         
     }
-    @When("user should select My Apartment on What are you moving selector")
-    public void user_should_select_my_house_on_what_are_you_moving_selector() {
-        Helper.selectByVisibleText(homePage.houseTypeSelect, "My Apartment");
+
+    @When("user should select {string} on What are you moving selector")
+    public void userShouldSelectOnWhatAreYouMovingSelector(String houseType) {
+        Helper.selectByVisibleText(homePage.houseTypeSelect, houseType);
+    }
+
+    @Then("{string} should be selected")
+    public void shouldBeSelected(String houseType) {
+        Assertions.assertEquals(houseType, Helper.getTextFromSelected(homePage.houseTypeSelectedValue).trim());
     }
 
     @When("user should select {int} bedroom, on bedroom amount selector")
@@ -39,5 +46,7 @@ public class HomeWork1Steps {
         
         
     }
+
+
 
 }

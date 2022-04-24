@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/imoving/UI/stepDefs",
         tags = "@Smoke",
-        dryRun = false,
+        dryRun = true,
         plugin = {
                 "pretty",
                 "html:target/default-cucumber-reports",

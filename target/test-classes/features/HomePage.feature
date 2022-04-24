@@ -2,7 +2,7 @@
 Feature: Home page functionalities
 
   Background:
-    Given user is on prod environment
+    Given user is on qa environment
 
 
   Scenario: Verify labor tab button is clickable

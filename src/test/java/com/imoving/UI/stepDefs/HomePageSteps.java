@@ -14,8 +14,8 @@ public class HomePageSteps {
     WebDriver driver = Driver.getDriver();
     HomePage homePage = new HomePage();
 
-    @Given("user is on prod environment")
-    public void user_is_on_prod_environment() {
+    @Given("user is on qa environment")
+    public void user_is_on_qa_environment() {
         driver.get(ConfigReader.getProperty("environment"));
     }
 
