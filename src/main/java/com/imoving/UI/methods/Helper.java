@@ -2,6 +2,7 @@ package com.imoving.UI.methods;
 
 import com.imoving.UI.utils.Driver;
 import io.cucumber.java.Scenario;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -28,6 +29,7 @@ public class Helper {
                 .until(ExpectedConditions.elementToBeClickable(element));
     }
 
+
     public static void sendKeys(WebElement element, String value) {
         element.sendKeys(value);
     }
@@ -53,6 +55,11 @@ public class Helper {
     public static void selectByIndex(WebElement element, int index){
         Select select = new Select(element);
         select.selectByIndex(index);
+    }
+
+    public static String getTextFromSelected(WebElement element){
+        waitElementToBeDisplayed(element);
+        return element.getText();
     }
 
 
