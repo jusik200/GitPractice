@@ -1,0 +1,12 @@
+com/imoving/UI/methods/CustomAssertions.class
+com/imoving/UI/pageObject/fullInventoryPage/rooms/LivingRoomPage.class
+com/imoving/UI/utils/SafariWebDriver.class
+com/imoving/UI/pageObject/HomePage.class
+com/imoving/UI/dataProviders/ConfigReader.class
+com/imoving/UI/utils/FirefoxWebDriver.class
+com/imoving/UI/utils/Driver.class
+com/imoving/UI/pageObject/fullInventoryPage/FullInventoryPage.class
+com/imoving/UI/utils/ChromeWebDriver.class
+com/imoving/UI/pageObject/fullInventoryPage/popUps/TheseAreRecommendedRoomsForAPopUpPage.class
+com/imoving/UI/pageObject/fullInventoryPage/popUps/BoxCalculatorPage.class
+com/imoving/UI/methods/Helper.class

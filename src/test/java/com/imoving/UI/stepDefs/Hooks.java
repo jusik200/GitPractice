@@ -4,8 +4,6 @@ import com.imoving.UI.utils.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriverException;
@@ -14,7 +12,7 @@ public class Hooks {
 
     @Before
     public void setUp(){
-        System.out.println("Driver is starter");
+        System.out.println("Driver is started");
     }
 
     @After
