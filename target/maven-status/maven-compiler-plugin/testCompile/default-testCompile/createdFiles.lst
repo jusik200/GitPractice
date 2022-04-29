@@ -1,0 +1,5 @@
+com/imoving/UI/stepDefs/Hooks.class
+com/imoving/UI/stepDefs/HomeWork1Steps.class
+com/imoving/UI/runners/SmokeRunner.class
+com/imoving/UI/stepDefs/HomePageSteps.class
+com/imoving/UI/stepDefs/FullInventorySteps.class

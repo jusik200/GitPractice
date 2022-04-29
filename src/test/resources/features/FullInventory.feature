@@ -2,7 +2,7 @@
 Feature: Full Inventory functionalities
 
   Background:
-  Given user is on qa environment
+    Given user is on qa environment
 
   Scenario: Verify user can add items to each room
     Given user should select "My House" on What are you moving selector
@@ -38,3 +38,15 @@ Feature: Full Inventory functionalities
     And user should click save and go to next button in Patio room
     Then "Box Calculator" pop up appears
     When user should click Add and Continue button in Box Calculator pop up
+    When user should input 55344 zip code to pick up from input field and choose very first option
+    And user should increment flight of stairs to 3
+    Then flight of stairs quantity counter should display 3
+    When user should increment long carry to 75-150
+    Then long carry quantity counter should display "75-150"
+    When user click approve button in pick up from restrictions
+    And user should input 42553 zip code to drop off at input field and choose second option
+    Then user click approve button in drop off at restrictions
+    When user should choose pick up date 5 may 2022
+    And choose the 12pm - 4pm radiobutton
+    And choose "2 Days. May. 05 - May. 06" flexible date
+

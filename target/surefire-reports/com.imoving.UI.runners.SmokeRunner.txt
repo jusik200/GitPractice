@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.imoving.UI.runners.SmokeRunner
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 36.696 s - in com.imoving.UI.runners.SmokeRunner

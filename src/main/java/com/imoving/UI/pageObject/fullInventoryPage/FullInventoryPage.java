@@ -53,11 +53,7 @@ public class FullInventoryPage {
     @FindBy(xpath = "/html/body/div/div/div/div[1]/div[3]/div[1]/button")
     public WebElement saveAndGoToNextButton;
 
-    @FindBy(xpath = "/html/body/div/div/div/div[1]/main/div/div[1]/section/div[2]/div/div[1]/div/div/figure/div[2]/div[4]/div/a[1]")
-    public WebElement livingRoomSofaAddToInventoryButton;
 
-    @FindBy(xpath = "/html/body/div/div/div/div[1]/main/div/div[1]/section/div[2]/div/div[2]/div/div/figure/div[2]/div[4]/div/a[1]")
-    public WebElement livingRoomTVAddToInventoryButton;
 
     @FindBy(xpath = "/html/body/div/div/div/div[1]/main/div/div[1]/section/div[2]/div/div[1]/div/div/figure/div[2]/div[4]/div/a[1]")
     public WebElement bedroomDresserAddToInventoryButton;
