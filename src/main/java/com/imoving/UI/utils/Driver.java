@@ -3,15 +3,18 @@ package com.imoving.UI.utils;
 import com.imoving.UI.dataProviders.ConfigReader;
 import org.openqa.selenium.WebDriver;
 
+import java.net.MalformedURLException;
+
 public class Driver {
 
-    private Driver(){}
+    private Driver() {
+    }
 
     private static WebDriver driver;
 
     public static WebDriver getDriver(){
         if (driver == null) {
-            switch (ConfigReader.getProperty("browser").toLowerCase()){
+            switch (ConfigReader.getProperty("browser").toLowerCase()) {
                 default:
                     driver = ChromeWebDriver.loadChromeDriver();
                     break;
@@ -21,14 +24,17 @@ public class Driver {
                 case "safari":
                     driver = SafariWebDriver.loadSafariDriver();
                     break;
+//                case "sauce labs":
+//                    driver = SauceLabsDemo1.loadSauceLabs();
+//                    break;
             }
         }
         return driver;
     }
 
-    public static void closeDriver(){
+    public static void closeDriver() {
         try {
-            if (driver != null){
+            if (driver != null) {
                 driver.close();
                 driver.quit();
                 driver = null;

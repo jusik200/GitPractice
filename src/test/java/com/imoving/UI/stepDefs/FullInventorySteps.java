@@ -18,6 +18,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 
+
 public class FullInventorySteps {
 
     WebDriver driver = Driver.getDriver();
@@ -27,6 +28,9 @@ public class FullInventorySteps {
     LivingRoomPage livingRoomPage = new LivingRoomPage();
     MovingDetailsPage movingDetailsPage = new MovingDetailsPage();
     TheseAreRecommendedRoomsForAPopUpPage theseAreRecommendedRoomsForAPopUpPage = new TheseAreRecommendedRoomsForAPopUpPage();
+
+    public FullInventorySteps(){
+    }
 
 
     @Given("user should select {string} in Move Size drop down menu")
@@ -202,7 +206,6 @@ public class FullInventorySteps {
     public void userShouldInputZipCodeToPickUpFromInputFieldAndChooseVeryFirstOption(int arg0) {
         Helper.sendKeys(movingDetailsPage.pickUpFromZipCodeInputField, String.valueOf(arg0));
         Helper.click(movingDetailsPage.pickUpFromZipCodeInputField);
-        Helper.pause(199);
         Helper.sendKeys(movingDetailsPage.pickUpFromZipCodeInputField, Keys.ARROW_DOWN);
         Helper.sendKeys(movingDetailsPage.pickUpFromZipCodeInputField, Keys.RETURN);
     }
