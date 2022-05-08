@@ -10,21 +10,21 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class SauceLabsDemo1 {
-
-    public static WebDriver loadSauceLabs() throws MalformedURLException {
-
-
-
-
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("platformName", Platform.WIN10);
-        capabilities.setCapability("browserName", BrowserType.EDGE);
-        capabilities.setCapability("browserVersion", "latest");
-
-        WebDriver driver = new RemoteWebDriver(new URL(url), capabilities);
-
-        return driver;
-    }
+//
+//    public static WebDriver loadSauceLabs() throws MalformedURLException {
+//
+//
+//
+//
+//        DesiredCapabilities capabilities = new DesiredCapabilities();
+//        capabilities.setCapability("platformName", Platform.WIN10);
+//        capabilities.setCapability("browserName", BrowserType.EDGE);
+//        capabilities.setCapability("browserVersion", "latest");
+//
+//        WebDriver driver = new RemoteWebDriver(new URL(url), capabilities);
+//
+//        return driver;
+//    }
 
 
 
