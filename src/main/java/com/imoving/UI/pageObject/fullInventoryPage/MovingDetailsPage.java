@@ -33,6 +33,9 @@ public class MovingDetailsPage {
     public void clickPickUpFromApproveInstructionsToTheMovers(){
         Helper.click(pickUpFromApproveInstructionsToTheMovers);
     }
+    @FindBy(xpath = "/html/body/div[1]/div/div/div[1]/main/div/section[2]/div[1]/div[1]/div[1]/address-selection/div/h3/span/span[1]")
+    public WebElement pleaseEnterFullAddressPickUpFromWarning;
+
 
 
     @FindBy(xpath = "/html/body/div[1]/div/div/div[1]/main/div/section[2]/div[1]/div[1]/div[2]/address-selection/div/input-auto-complete-address/span/input")
@@ -44,6 +47,8 @@ public class MovingDetailsPage {
     public void clickDropOffAtApproveInstructionsToTheMovers(){
         Helper.click(dropOffAtApproveInstructionsToTheMovers);
     }
+    @FindBy(xpath = "/html/body/div[1]/div/div/div[1]/main/div/section[2]/div[1]/div[1]/div[2]/address-selection/div/h3/span/span[1]")
+    public WebElement pleaseEnterFullAddressDropOffAtFromWarning;
 
 
     @FindBy(xpath = "/html/body/div[1]/div/div/div[1]/main/div/section[2]/div[1]/div[2]/div[1]/date-picker/div/p/span/button")

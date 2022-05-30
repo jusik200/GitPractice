@@ -38,7 +38,7 @@ Feature: Full Inventory functionalities
     And user should click save and go to next button in Patio room
     Then "Box Calculator" pop up appears
     When user should click Add and Continue button in Box Calculator pop up
-    When user should input 55344 zip code to pick up from input field and choose very first option
+    When user should input "Dequindre Road, Sterling Heights, MI, USA" zip code to pick up from input field and choose very first option
     And user should increment flight of stairs to 3
     Then flight of stairs quantity counter should display 3
     When user should increment long carry to 75-150

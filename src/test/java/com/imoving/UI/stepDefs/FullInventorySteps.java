@@ -40,7 +40,6 @@ public class FullInventorySteps {
 
     @Then("{string} pop up should appear")
     public void pop_up_should_appear(String string) {
-        Helper.waitElementToBeDisplayed(theseAreRecommendedRoomsForAPopUpPage.theseAreRecommendedRoomsPopUpText);
         CustomAssertions.assertText("here we comparing pop up txt", string, theseAreRecommendedRoomsForAPopUpPage.theseAreRecommendedRoomsPopUpText);
 
     }
@@ -52,13 +51,11 @@ public class FullInventorySteps {
 
     @Then("Boxes pop up should appear with {string} button")
     public void boxes_pop_up_should_appear_with_button(String string) {
-        Helper.waitElementToBeDisplayed(fullInventoryPage.boxesPopUpGotItButton);
         CustomAssertions.assertText("boxes pop up", string, fullInventoryPage.boxesPopUpGotItButton);
     }
 
     @When("user click on GOT IT button in Boxes pop up")
     public void user_click_on_got_it_button_in_boxes_pop_up() {
-        Helper.waitElementToBeClickable(fullInventoryPage.boxesPopUpGotItButton);
         Helper.click(fullInventoryPage.boxesPopUpGotItButton);
     }
 
@@ -202,12 +199,16 @@ public class FullInventorySteps {
 
     }
 
-    @Given("user should input {int} zip code to pick up from input field and choose very first option")
-    public void userShouldInputZipCodeToPickUpFromInputFieldAndChooseVeryFirstOption(int arg0) {
+    @When("user should input {string} zip code to pick up from input field and choose very first option")
+    public void userShouldInputZipCodeToPickUpFromInputFieldAndChooseVeryFirstOption(String arg0) {
+        Helper.pause(3000);
         Helper.sendKeys(movingDetailsPage.pickUpFromZipCodeInputField, String.valueOf(arg0));
         Helper.click(movingDetailsPage.pickUpFromZipCodeInputField);
-        Helper.sendKeys(movingDetailsPage.pickUpFromZipCodeInputField, Keys.ARROW_DOWN);
-        Helper.sendKeys(movingDetailsPage.pickUpFromZipCodeInputField, Keys.RETURN);
+        movingDetailsPage.pickUpFromZipCodeInputField.sendKeys(Keys.ARROW_DOWN);
+        movingDetailsPage.pickUpFromZipCodeInputField.sendKeys(Keys.RETURN);
+//        Helper.sendKeys(movingDetailsPage.pickUpFromZipCodeInputField, Keys.ENTER);
+        Helper.pause(5000);
+        CustomAssertions.assertIsNotPresented(movingDetailsPage.pleaseEnterFullAddressPickUpFromWarning);
     }
 
     @And("user should increment flight of stairs to {int}")
@@ -242,6 +243,8 @@ public class FullInventorySteps {
         Helper.sendKeys(movingDetailsPage.dropOffAtZipCodeInputField, Keys.ARROW_DOWN);
         Helper.sendKeys(movingDetailsPage.dropOffAtZipCodeInputField, Keys.ARROW_DOWN);
         Helper.sendKeys(movingDetailsPage.dropOffAtZipCodeInputField, Keys.RETURN);
+        Helper.pause(5000);
+        CustomAssertions.assertIsNotPresented(movingDetailsPage.pleaseEnterFullAddressDropOffAtFromWarning);
     }
 
     @Then("user click approve button in drop off at restrictions")
@@ -259,6 +262,7 @@ public class FullInventorySteps {
     public void chooseThePmPmRadiobutton(int arg0, int arg1) {
         movingDetailsPage.clickAfterNoonPickUpDateRadioButton();
         Helper.pause(5000);
+
     }
 
     @And("choose {string} flexible date")
@@ -266,4 +270,6 @@ public class FullInventorySteps {
         Helper.selectByVisibleText(movingDetailsPage.flexibleWithDateDropDownMenu, arg0);
         Helper.pause(5000);
     }
+
+
 }

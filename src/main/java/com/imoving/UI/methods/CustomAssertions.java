@@ -9,4 +9,7 @@ public class CustomAssertions {
         Helper.waitElementToBeDisplayed(actualElement);
         Assertions.assertEquals(expectedTxt, Helper.getTextFromSelected(actualElement), "Comparing " + message);
     }
+    public static void assertIsNotPresented(WebElement elementThatShouldNotBePresented){
+        Assertions.assertFalse(elementThatShouldNotBePresented.isDisplayed());
+    }
 }
